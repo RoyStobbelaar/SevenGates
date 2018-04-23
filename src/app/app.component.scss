@@ -1,0 +1,56 @@
+@import './general.scss';
+
+:host {
+
+
+  .main-container {
+    margin: -10px;
+    width: 110%;
+    height: 100vh;
+    background-color: #111;
+    .side-menu {
+      width: 180px;
+      position: absolute;
+      height: 100vh;
+      background-color: #222;
+    }
+
+    .main-content {
+      position: relative;
+      left: 180px;
+      height: 100%;
+      margin: auto;
+
+      .central-hub {
+        position: absolute;
+        width: 40%;
+        left: 20%;
+        top: 20%;
+
+        .row {
+          display: inline-flex;
+          width: 100%;
+
+          .item {
+            width: 300px;
+            background-color: #444;
+            border: 1px solid white;
+            height: 120px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 240ms;
+            color: black;
+
+            .text {
+              line-height: 100px;
+            }
+          }
+          .item:hover {
+            background-color: #555;
+            color: #eee;
+          }
+        }
+      }
+    }
+  }
+}
