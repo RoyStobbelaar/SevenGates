@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SideMenuService} from '../services/side-menu.service';
 
 
 @Component({
@@ -11,12 +12,12 @@ import { Component, OnInit } from '@angular/core';
 export class MenuGridComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private _sideMenuService: SideMenuService) {
 
   }
 
   ngOnInit() {
-
+    this._sideMenuService.setMenu(false);
   }
 
 }

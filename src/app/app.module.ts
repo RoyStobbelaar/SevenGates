@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { StoryComponent } from './story/story.component';
 import { WorldComponent } from './world/world.component';
 import { EditorComponent } from './editor/editor.component';
+import { SideMenuService } from './services/side-menu.service';
 
 const appRoutes = [
   { path: '', component: MenuGridComponent },
@@ -41,7 +42,7 @@ const appRoutes = [
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SideMenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
