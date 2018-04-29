@@ -11,11 +11,15 @@ export class AppComponent implements OnInit {
   public menu: boolean;
 
   constructor(public sideMenuService: SideMenuService) {
-
+    this.sideMenuService.onMenuStateChange.subscribe(result => {
+      setTimeout(() => {
+        this.menu = !result;
+      }, 20);
+    });
   }
 
   ngOnInit() {
-    this.menu = this.sideMenuService.menu;
+
   }
 }
 
